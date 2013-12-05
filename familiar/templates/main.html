@@ -4,17 +4,55 @@
 <head>
     <title>Wood Family Home</title>
     <link rel="stylesheet" href="/site_media/css/master.css" type="text/css" media="screen,projection" />
+    <script>
+    function showform() {	
+        alert("hey man");
+    }
+    alert('hey man2');
+    </script>
 </head>
 <body>
     <div class="container" align="center" >
         <div class="header">Our Family Page</div>	
 	<div class="box_right">
-	    <p>CHRIS: Hey man what's going on? So this one time b;ah blah blah blah blah vlagh
-	    sdfg fdsg sdfg fgfff fsdfgfd.
+	{% if logged_in %}
+	    <p>CHRIS: This is where the latest messages/conversations will live. You'll
+	    also be able to click on a user and see what they in particular have had to say.
+	    If you get royally offended, notify Mr. Hammond or Wood directly please.
             </p>
-	</div>
-        <!--<img src="/site_media/images/pirate-cat.jpeg" alt="cat" name="cat_ex" />-->
-        <div class="box_left"><p>Here is a div box2</p></div>
+	{% else %}
+	    <p class="error">You are not logged in.</p>
+	{% endif %}
+	</div> <!-- end box_right -->
+        <div class="box_left">
+	{% if logged_in %}
+	    <p>Check out everyone's incredibly selfish Christmas wish lists,
+	and start/edit your own here!!!
+	    <a href="{% url 'website.familiar.views.Christmas_list' %}">CHRISTMAS LISTS!</a>
+	limit of 1000 items, sorry Annie :(</p></div>
+	{% else %}
+	    <p>Please login below. If you haven't registered yet, click here...
+	       <button name="register" onclick="showform()" value="register" />Register</button></p>
+	    <button>
+	    <form action=# method="post" id='login_form'>
+		<p>
+                    <label for="username">
+                        <span>username: </span>
+                        <input type="text" id="username" name="username" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                </p>
+		<p>
+		    <label for="password">
+                        <span>password: </span>
+                        <input type="text" id="password" name="password" required/>
+			<strong><abbr title="required">*</abbr></strong>
+		    </label>
+		</p>
+		<p><input type=submit value="submit" id='submit'/></p>		
+            </form></button>
+	{% endif %}                                                       
+	</div> <!-- end box left -->    
     </div> <!-- end container -->
 </body>
 </html>

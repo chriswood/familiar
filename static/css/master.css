@@ -1,4 +1,4 @@
-/* css sheet for family page website. I suck at css but am getting better. */
+* css sheet for family page website. I suck at css but am getting better. */
 
 body {
     width: auto;
@@ -8,6 +8,7 @@ body {
     border: thin;
     background: #514CB5;
 }
+
 .container {
     width: 800px;
     margin-left: auto;
@@ -16,14 +17,13 @@ body {
 }
 
 .header {
-  font-size: xx-large;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  border-color: #4CB551;
-  border-width: medium;
-
+    font-size: xx-large;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-color: #4CB551;
+    border-width: medium;
 }
 
 .box_left {
@@ -36,7 +36,7 @@ body {
     margin: 10px;
     padding: 10px 10px 10px 10px;
     background-color: #B5514C;
-  }
+}
 
 .box_right {
     float: right;
@@ -49,5 +49,9 @@ body {
     margin: 10px;
     padding: 10px 10px 10px 10px;
     background-color: #B5514C;
-  }
+}
   
+.error {
+    font-size: xx-large;
+    color: black;
+}
