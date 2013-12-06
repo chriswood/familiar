@@ -11,9 +11,13 @@ def main(request):
     '''
     Handles the home page for the app. It displays the latest comments.
     '''
+    
     username = 'chris'
 
-    data = {'logged_in': logged_in(username)}
+    data = {
+        'logged_in': logged_in(username),
+        'btn_txt': 'click to submit yer info', 
+    }
     return render_to_response('main.html',
                           data,
                           context_instance=RequestContext(request))

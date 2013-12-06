@@ -1,4 +1,4 @@
-* css sheet for family page website. I suck at css but am getting better. */
+/* css sheet for family page website. I suck at css but am getting better. */
 
 body {
     width: auto;
@@ -49,6 +49,14 @@ body {
     margin: 10px;
     padding: 10px 10px 10px 10px;
     background-color: #B5514C;
+}
+
+.button {
+    text-align: center;
+}
+
+#register_form {
+    display: none;
 }
   
 .error {
